@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | PeachGlow — Салон красоты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="index.html">Peach<span>Glow</span></a></div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a> &gt; <span>Услуги</span>
+        </nav>
+        
+        <h2>Наше бьюти-меню</h2>
+        <div class="grid-container">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=500&q=80" alt="Маникюр" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Комплексный маникюр Premium</h3>
+                    <p class="product-desc">Идеальная форма, бережная обработка кутикулы и стойкое покрытие.</p>
+                    <div class="product-footer">
+                        <span class="product-price">60 BYN</span>
+                        <a href="contact.html?service=Комплексный маникюр Premium" class="btn" style="padding: 6px 15px; font-size: 14px;">Записаться</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80" alt="Окрашивание" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Сложное окрашивание (Airtouch)</h3>
+                    <p class="product-desc">Трендовая техника рассветления волос с максимально мягким отрастанием корней.</p>
+                    <div class="product-footer">
+                        <span class="product-price">180 BYN</span>
+                        <a href="product.html" class="btn" style="padding: 6px 15px; font-size: 14px;">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Макияж" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Дневной макияж & Укладка</h3>
+                    <p class="product-desc">Гармоничный и легкий образ для вашего уверенного дня.</p>
+                    <div class="product-footer">
+                        <span class="product-price">95 BYN</span>
+                        <a href="contact.html?service=Дневной макияж и укладка" class="btn" style="padding: 6px 15px; font-size: 14px;">Записаться</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=500&q=80" alt="Уход за лицом" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Уходовая программа "Peach Skin"</h3>
+                    <p class="product-desc">Глубокое очищение, тонизирование, авторский массаж лица и питательная маска.</p>
+                    <div class="product-footer">
+                        <span class="product-price">110 BYN</span>
+                        <a href="contact.html?service=Программа ухода Peach Skin" class="btn" style="padding: 6px 15px; font-size: 14px;">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo"><a href="index.html">Peach<span>Glow</span></a></div>
+            <div class="footer-info">
+                &copy; 2026 PeachGlow. Салон красоты премиум-класса. Минск, Беларусь.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

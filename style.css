@@ -1,0 +1,328 @@
+/* Единая стилистика бьюти-салона в персиковых оттенках */
+:root {
+    --bg-color: #fff6f2;        /* Мягкий нежно-персиковый фон */
+    --card-bg: #ffffff;         /* Белоснежный для контраста блоков */
+    --text-primary: #4a3e3d;    /* Мягкий кофейно-серый для текста */
+    --text-muted: #8c7b7a;      /* Приглушенный тон */
+    --accent: #ff9e7d;          /* Насыщенный персиковый/коралловый акцент */
+    --accent-hover: #e68665;    /* Темный персик для наведения */
+    --border-color: #f7e3db;    /* Пастельные границы */
+    --font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Хедер */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(74, 62, 61, 0.05);
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Мейн */
+main {
+    flex: 1;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Баннер на главной */
+.banner {
+    background: linear-gradient(135deg, #fffcfb 0%, #fceae2 100%);
+    border-radius: 12px;
+    padding: 70px 50px;
+    margin-bottom: 45px;
+    border-left: 6px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(230, 134, 101, 0.05);
+}
+
+.banner h1 {
+    font-size: 38px;
+    margin: 0 0 15px 0;
+    color: #3b302f;
+}
+
+.banner p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px; /* Скругленные "бьюти" кнопки */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Сетка карточек */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.02);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 134, 101, 0.1);
+}
+
+.product-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 19px;
+    margin: 0 0 12px 0;
+    color: #3b302f;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent-hover);
+}
+
+/* Одиночная страница бьюти-услуги */
+.product-single {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.product-gallery {
+    height: 420px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Форма */
+.form-container, .text-section {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #fffbf9;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: #fff;
+}
+
+/* Футер */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+    padding: 35px 20px;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Адаптивная верстка (Мобилки 360px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .header-container {
+        padding: 12px 15px;
+    }
+    
+    .banner {
+        padding: 35px 20px;
+    }
+    
+    .banner h1 {
+        font-size: 26px;
+    }
+    
+    .product-single {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 15px;
+    }
+    
+    .product-gallery {
+        height: 260px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

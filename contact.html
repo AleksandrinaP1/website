@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | PeachGlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="index.html">Peach<span>Glow</span></a></div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a> &gt; <span>Контакты</span>
+        </nav>
+        
+        <div class="form-container">
+            <h2>Онлайн-запись в салон</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Оставьте ваши контактные данные. Администратор свяжется с вами в течение 10 минут для подтверждения даты и времени визита.</p>
+            
+            <form id="feedbackForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" class="form-control" placeholder="Елена" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона *</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="+375 (29) 123-45-67" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Какая процедура или мастер вас интересует?</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Например: Маникюр, желательно на вечер пятницы..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Записаться на визит</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo"><a href="index.html">Peach<span>Glow</span></a></div>
+            <div class="footer-info">
+                &copy; 2026 PeachGlow. Салон красоты премиум-класса. Минск, Беларусь.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
